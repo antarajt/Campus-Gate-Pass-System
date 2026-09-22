@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard | Campus Gate Pass{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">CG</div>
+
+            <div>
+                <h2>Campus Gate</h2>
+                <span>Pass Management</span>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span>Visitors</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🎫</span>
+                <span>Gate Passes</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🕘</span>
+                <span>Visit History</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👥</span>
+                <span>Users</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-info">
+                    <strong>Administrator</strong>
+                    <span>Admin</span>
+                </div>
+
+                <button class="logout-btn">↪</button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Area -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+            <div class="page-heading">
+                <h1>Dashboard</h1>
+                <p>Welcome back, Administrator</p>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="notification-btn">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="topbar-avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Content -->
+        <section class="dashboard-content">
+
+            <!-- Welcome -->
+            <div class="welcome-card">
+
+                <div>
+                    <span class="welcome-label">OVERVIEW</span>
+
+                    <h2>Campus Visitor Management</h2>
+
+                    <p>
+                        Monitor visitors, manage gate passes,
+                        and keep your campus secure.
+                    </p>
+                </div>
+
+                <a href="#" class="primary-btn">
+                    + New Gate Pass
+                </a>
+
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon visitors-icon">
+                        👥
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Total Visitors</span>
+                        <strong>1,248</strong>
+                        <small>+12.5% this month</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon active-icon">
+                        🎫
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Active Passes</span>
+                        <strong>86</strong>
+                        <small>Currently active</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon today-icon">
+                        📅
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Today's Visits</span>
+                        <strong>42</strong>
+                        <small>8 pending approval</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon pending-icon">
+                        ⏳
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Pending Requests</span>
+                        <strong>12</strong>
+                        <small>Requires attention</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Recent Visits -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Visits</h3>
+                        <p>Latest visitor activity</p>
+                    </div>
+
+                    <a href="#" class="view-all">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table class="visitors-table">
+
+                        <thead>
+                            <tr>
+                                <th>Visitor</th>
+                                <th>Purpose</th>
+                                <th>Host</th>
+                                <th>Check-in</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="visitor-cell">
+
+                                        <div class="visitor-avatar">
+                                            JD
+                                        </div>
+
+                                        <div>
+                                            <strong>John Doe</strong>
+                                            <span>john@example.com</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Meeting</td>
+
+                                <td>Dr. Michael Smith</td>
+
+                                <td>09:42 AM</td>
+
+                                <td>
+                                    <span class="status-badge checked-in">
+                                        Checked In
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="visitor-cell">
+
+                                        <div class="visitor-avatar">
+                                            SW
+                                        </div>
+
+                                        <div>
+                                            <strong>Sarah Wilson</strong>
+                                            <span>sarah@example.com</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Interview</td>
+
+                                <td>HR Department</td>
+
+                                <td>10:15 AM</td>
+
+                                <td>
+                                    <span class="status-badge pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="visitor-cell">
+
+                                        <div class="visitor-avatar">
+                                            RB
+                                        </div>
+
+                                        <div>
+                                            <strong>Robert Brown</strong>
+                                            <span>robert@example.com</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Delivery</td>
+
+                                <td>Administration</td>
+
+                                <td>11:03 AM</td>
+
+                                <td>
+                                    <span class="status-badge checked-out">
+                                        Checked Out
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+{% endblock %}
